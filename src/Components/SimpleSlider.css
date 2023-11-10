@@ -1,0 +1,67 @@
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  letter-spacing: 7px;
+  transform: translate(-50%, -50%);
+  font-family: "Open Sans" !important;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  z-index: 1;
+}
+.StoreLocator
+{
+  margin: 50px;
+  padding: 15px;
+  font-family: "Raleway";
+  border-radius: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: 30px;
+}
+.HeroImage
+{   margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed; /* Optional: Fixed background for scrolling pages */
+  background-position: center; /* Optional: Center the background image */
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-container1
+{
+    max-width: 1920px;
+    text-align: center;
+}
+.slick-dots
+{
+  visibility: hidden;
+}
+.slick-prev,
+.slick-next {
+  font-size: 24px; /* Change the font size to make the arrows larger */
+  color: #1b0303; /* Change the arrow color to black */
+  background-color: rgba(255, 255, 255, 0.8); /* Change the background color of the arrows */
+  border-radius: 50%; /* Make the arrows circular */
+  width: 40px; /* Adjust the width of the arrows */
+  height: 40px; /* Adjust the height of the arrows */
+  line-height: 40px; /* Center the arrow content vertically */
+  visibility: hidden;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #000; /* Change the background color on hover */
+  color: #fff; /* Change the text color on hover */
+}
+@media only screen and (max-width: 1024px)
+{
+    .text-overlay{
+        font-size: 47px;
+
+    }
+}

@@ -1,0 +1,92 @@
+.Section2
+{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding:40px;
+    grid-template-columns: 20% 80%;
+    grid-gap:10px;
+    height: 100%;
+    width:100%;
+    margin-top:-6px;
+    background-color: #f5f5ef;
+}
+.Writing-heading
+{
+    font-size: 29px;
+    font-weight: 900;
+    font-family: "open-sans";
+    color:#333333;
+}
+
+.Writing_desciption
+{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Raleway";
+    color: #666666;
+}
+.Writing
+{   
+    width: 100%;
+    text-align: left;
+}
+.ImageBlocks
+{
+    background-color: antiquewhite;
+    display: flex;
+    
+}
+.ImageBlck_Item
+{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ddd;
+}
+.ImageBlck_Item img
+{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain the image's aspect ratio */
+  }
+  .my-masonry-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -15px;
+    width: auto;
+  }
+  .msonry-item
+  {
+    width: 25%; /* Adjust this value as needed */
+  padding-top: 25%;
+  }
+  .my-masonry-grid_column {
+    padding-left: 15px;
+    background-clip: padding-box;
+  }
+  
+  .my-masonry-grid_column > div {
+    margin-bottom: 15px;
+  }
+  .my-masonry-grid_item .image-text {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family:"Open-sans";
+    font-weight: 900;
+  }
+  
+  .my-masonry-grid_item:hover .image-text {
+    opacity: 1;
+  }
+@media only screen and (max-width: 1024px)
+{
+    .Section2{
+        display: block;
+    }
+}

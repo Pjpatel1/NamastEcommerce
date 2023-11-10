@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Open+Sans&family=Oswald&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web", sans-serif;
+}
+nav a{
+	margin: 0 0.5rem !important;
+}
+:root {
+	--mainColor: #2196F3;
+	--mainColorLight: #4CAF50;
+	--secondaryColor: #db2b39;
+	--textColor: #000000;
+    --bs-btn-bg: #29335c !important;
+}
+.Header_Center
+{
+    width: 100% ;
+    margin: 0 auto;
+}
+.Cart
+{
+	width:20px;
+}
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: #4CAF50;
+	color: #FFFFFF;
+}
+.Logo_parent
+{
+    height: 90px;
+    width: auto;
+    overflow: hidden;
+}
+.Logo
+{
+    background-size: cover;
+    padding: 5px;
+    height: 80px;
+}
+.FreeSpace
+{
+    flex-grow: 1;
+}
+nav a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+.Nav-Elements
+{
+	margin: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+	font-weight: 900;
+	Color:#ffffff;
+}
+.Nav-Elements:hover
+{
+	color:#E0E0E0;
+}
+.DrpDwn
+{
+    color: var(--textColor) !important;
+    background-color: var(--mainColor) !important;
+   
+
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -110vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		background-color: #4CAF50;
+		transition: 0.8s;
+		z-index: 10;
+	}
+
+	header .responsive_nav {
+		transform: translateY(110vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}

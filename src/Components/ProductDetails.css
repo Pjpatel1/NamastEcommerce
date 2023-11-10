@@ -1,0 +1,110 @@
+.carousel-container {
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  .all-details
+  {
+
+  }
+  .box
+  {
+    width: 50%;
+    margin: 20px;
+    border-radius: 20px;
+    border:#ccc solid 3px;
+    overflow: hidden;
+  }
+  .thumbs
+  {
+    text-align: center;
+  }
+  .all-details
+  {
+    display: flex;
+  }
+  .box1
+  {
+    width: 50%;
+    margin: 20px;
+    border:#ccc 3px solid;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  .Brand
+  {
+    text-decoration: dotted underline;
+  }
+  .Price
+  {
+    font-size: large;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .Label
+  {
+    font-size: large;
+    font-weight: bolder;
+
+  }
+  .Avialabltiy
+  {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .Avail-Decision
+  {
+    font-size: 20px;
+  }
+  .ProductName
+  {
+    font-size: 30px;
+    font-weight: 900;
+
+  }
+  .Product_Discription
+  {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 1px dotted #ccc;
+    border-radius: 20px;
+  }
+
+  .slide {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+  }
+  .slide img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.2s ease;
+
+  }
+  .slide img:hover
+  {
+   
+        transform: scale(1.2); /* Increase the scale for zoom effect */
+  }
+.Chkout-Btn
+{
+    padding: 10px;
+    background-color: #4CAF50;
+    border-radius: 20px;
+    color:#FFFFFF;
+    margin: 0 auto;
+}
+.Chkout-Btn:hover
+{
+    background-color: #4caf4fbd;
+    cursor:pointer;
+}
+.Chkout
+{
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+.section3
+{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 49% 49%;
+    grid-gap:10px;
+    background-color: #f5f5ef;
+    align-items: center;
+    text-align: center;
+}
+
+.Maps-Location
+{
+    border-radius: 20px;
+    height: 100vh;
+}
+.Details
+{
+    
+}
+.Hero_Text
+{
+    font-family: "Open-Sans" !important;
+    font-size: 35px;
+    letter-spacing:4px;
+    font-weight:bold;
+
+}
+.Label-ContactUs
+{
+    font-family: "Open-Sans" !important;
+    font-size: 20px;
+    text-align: left;
+    font-weight:600;
+    width: 270px;
+    padding-top:30px;
+    margin: 0 auto;
+}
+.LabelInfo
+{
+    width: 270px;
+    font-family: "Raleway";
+    text-align: left;
+    padding-top: 5px;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 1024px)
+{
+    .section3{
+        display: block;
+    }
+}

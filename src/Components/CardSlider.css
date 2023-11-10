@@ -1,0 +1,73 @@
+.card-Btn
+{
+    background-color: #FF5722 !important;
+    color: #000;
+
+}
+.Sweets-cards
+{
+    max-width: 1920px;
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    /* background-color: #757575; */
+    border-radius: 20px;
+    padding: 20px;
+}
+.SweetImage
+{
+
+    background-color: #E0E0E0;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin: 10px;
+   
+
+}
+
+.slick-prev:before
+, .slick-next::before {
+    visibility: 0 !important;
+    color: transparent !important;
+    
+  }
+  .slick-prev:hover, .slick-next:hover {
+    visibility: 0 !important;
+    color: transparent;
+
+    
+  }
+.Card-Slider-constraints
+{
+    max-width: 1920px;
+    width: 90%;
+    margin: 0 auto;
+    /* background-color: #757575; */
+    padding: 20px;
+}
+.card1
+{
+
+    border-radius: 10px;
+    width: auto !important;
+    background-color: #F5F5F5;
+    margin: 10px;
+}
+.Slider-Sweet-img
+{
+    background-size: cover;
+    height:154px;
+    margin: 0 auto;
+    
+    background-repeat: no-repeat;
+}
+.Purchase-btn
+{
+    border-radius: 10px;
+    width: auto;
+    background-color: #FF5722;
+    margin: 0 auto;
+    padding: 5px;
+}

@@ -1,0 +1,73 @@
+.ProductCards
+{
+    display: grid;
+    margin: 2rem;
+    grid-template-columns: repeat(auto-fit,  20rem);
+    justify-content: center;
+}
+.ImageAddToCart
+{
+    width: 40px;
+
+}
+.ProductCard
+{
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    /* background-color: #; */
+    border-radius: 20px;
+}
+.ProImage
+{
+    background-size: cover;
+    width:280px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.ProductDetailsbtn
+{
+    display: flex;
+    align-items: center;
+}
+.ProductPrice
+{
+    text-align: center;
+}
+.VDbtn
+{
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border-radius: 20px;
+    color:#FFFFFF;
+    margin: 0 auto;
+}
+.VDbtn:hover
+{
+    background-color:#59f387fd;
+}
+.Quantity
+{
+    width: 50px;
+    height: 25px;
+    background-color: #061937;
+    border-radius: 3px;
+    color:#FFFFFF;
+    margin: 0 auto;
+}
+.QuantityLabel
+{
+    margin: 5px;
+    font-size: 20px;
+    font-size: "Open Sans";
+
+}
+.QtyLabel
+{
+    font-family: "Raleaway";
+    margin-right: 5px;
+}
+@media screen and (min-width:600px) {
+    
+}

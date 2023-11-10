@@ -1,0 +1,83 @@
+  @import url('https://fonts.googleapis.com/css2?family=Cardo&family=Open+Sans&family=Oswald&family=Raleway:wght@500&display=swap');
+.CartPage
+{
+    border: 2px grey;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width:90%;
+    margin:0 auto;
+}
+.CartProduct
+{
+    display: flex;
+    border-bottom: 2px solid #0000008a;
+    border-radius: 20px;
+}
+.ProductImageCover
+{
+    width: 25%;
+    margin: 10px;
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+
+}
+.ProductImage
+{
+    width: 90%;
+    border-radius: 10px;
+    background-size: cover;
+}
+.CartProductDetails
+{
+    display: block;
+    margin:10px;
+    font-family: "";
+
+}
+.CartProductName
+{
+    margin: 10px;
+}
+
+.CartQuantity
+{
+    width: 35px;
+    height: 20px;
+    background-color: #4CAF50;
+    border-radius: 3px;
+    color:#FFFFFF;
+    margin: 0 auto;
+}
+.cartMainText
+{
+    font-size: 20px;
+    font-family: "Open Sans";
+    font-weight: 900;
+}
+.CartValues
+{
+    font-size: 20px;
+    font-family: "Raleway";
+    margin-left: 5px;
+}
+.PayableAmount
+{
+    font-size: 22px;
+    font-family: "Raleway";
+    margin: 10px;
+}
+.line-div {
+    border-top: 1px solid #000; /* Adjust the color, width, and style as needed */
+  }
+  
+.billing
+{
+    display: flex;
+    margin: 10px;
+}
+.Greeting
+{
+    align-items: center;
+    text-align: center;
+}
