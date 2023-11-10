@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter >
       <Header/>
       <Routes>
-        <Route path='/Landing' element={<Landing />} />
+        <Route path='/' element={<Landing />} />
         <Route path="/"  exact element={<Preloader />}/>
         <Route path='/All_items' element={<AllItems/>} />
         <Route path = '/Drinks' element={<Drinks/>}/>
