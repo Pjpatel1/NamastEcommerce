@@ -20,9 +20,10 @@ import Forgotpassword from './Components/Auth/Forgotpassword';
 import UserCart from './Components/Cart/UserCart';
 import { UserProvider } from '../src/Components/Auth/UserContext'; // Import the UserProvider
 function App() {
+  const basename = process.env.NODE_ENV === 'production' ? '/my-repo' : '/';
   return (
     <UserProvider>
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename={basename}>
       <Header/>
       <Routes>
         <Route path='/Landing' element={<Landing />} />
