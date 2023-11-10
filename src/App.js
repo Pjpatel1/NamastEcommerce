@@ -25,7 +25,7 @@ function App() {
     <BrowserRouter >
       <Header/>
       <Routes>
-        <Route path='/' element={<Landing />} />
+        <Route path='/Landing' element={<Landing />} />
         <Route path="/"  exact element={<Preloader />}/>
         <Route path='/All_items' element={<AllItems/>} />
         <Route path = '/Drinks' element={<Drinks/>}/>
@@ -40,7 +40,7 @@ function App() {
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/ForgotPassword" element={<Forgotpassword/>}/>
         <Route path="/userCart" element={<UserCart/>}/>
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
 
       </Routes>
     </BrowserRouter>
