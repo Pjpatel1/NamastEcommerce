@@ -3,7 +3,7 @@ import './App.css';
 import Landing from './Components/Landing';
 import Preloader from './Components/Preloader';
 import Header from './Components/Header'
-import { BrowserRouter, Route, Switch,Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Switch,Routes,Router } from 'react-router-dom';
 import NotFoundPage from './Components/Notfoundpage';
 import AllItems from "./Components/Categorized/All_Items"
 import Drinks from "./Components/Categorized/Drinks";
@@ -23,7 +23,7 @@ function App() {
   const basename = process.env.NODE_ENV === 'production' ? '/my-repo' : '/';
   return (
     <UserProvider>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename='/Namaste'>
       <Header/>
       <Routes>
         <Route path='/Landing' element={<Landing />} />
