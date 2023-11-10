@@ -22,7 +22,7 @@ import { UserProvider } from '../src/Components/Auth/UserContext'; // Import the
 function App() {
   return (
     <UserProvider>
-    <BrowserRouter >
+    <BrowserRouter basename='/'>
       <Header/>
       <Routes>
         <Route path='/Landing' element={<Landing />} />
