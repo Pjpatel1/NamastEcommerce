@@ -26,7 +26,7 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/Landing' element={<Landing />} />
-        <Route path="/" element={<Preloader />}/>
+        <Route path="/"  exact element={<Preloader />}/>
         <Route path='/All_items' element={<AllItems/>} />
         <Route path = '/Drinks' element={<Drinks/>}/>
         <Route path = '/Flowers' element = {<Flowers/>}/>
