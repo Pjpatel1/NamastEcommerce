@@ -149,7 +149,7 @@ function Signup() {
                   <input type="Password" placeholder="Password" onChange={(e) => setConfirmPassword(e.target.value)}/>
               </div>
               <div>
-                <git a to ="/Login">
+                <Link a to ="/Login">
                   Already have an account
                 </Link>
               </div>
@@ -171,11 +171,11 @@ function Signup() {
             </div>
             <div className='Alerts'>
             <Stack sx={{ width: '100%' }} spacing={3}>
-            {(error =="Please fill in all fields") ?<Alert severity="error">Please fill in all field.</Alert>: null }
-            {(error =="Please Enter a valid email address.") ?<Alert severity="error">Please enter calid email address.</Alert>: null }
-            {(error =="Please Enter a Valid password with at least 8 character, including, number, and symbol.") ?<Alert severity="error">Please Enter a Valid password with at least 8 character, including, number, and symbol.</Alert>: null }
-            {(error =="Passwords do not match.") ?<Alert severity="error">Passwords do not match.</Alert>: null }
-            {(error == "User already exist use different email")?<Alert severity='error'>User already exist use different Email</Alert>:null}
+            {(error ==="Please fill in all fields") ?<Alert severity="error">Please fill in all field.</Alert>: null }
+            {(error ==="Please Enter a valid email address.") ?<Alert severity="error">Please enter calid email address.</Alert>: null }
+            {(error ==="Please Enter a Valid password with at least 8 character, including, number, and symbol.") ?<Alert severity="error">Please Enter a Valid password with at least 8 character, including, number, and symbol.</Alert>: null }
+            {(error ==="Passwords do not match.") ?<Alert severity="error">Passwords do not match.</Alert>: null }
+            {(error ==="User already exist use different email")?<Alert severity='error'>User already exist use different Email</Alert>:null}
             </Stack>
             </div>
         </div>
