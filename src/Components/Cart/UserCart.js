@@ -10,7 +10,7 @@ function UserCart() {
     const {user} = useUser();
     useEffect(() => {
         // Make a GET request to fetch the user's cart items
-        axios.get(`https://sampleserver-96f7c60072ed.herokuapp.com/cart/get-cart/${user.userId}`)
+        axios.get(`https://urlnamastebackend.onrender.com/cart/get-cart/${user.userId}`)
           .then((response) => {
             setCartItems(response.data);
             cartItems.map((cartItems)=>{

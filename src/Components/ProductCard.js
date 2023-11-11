@@ -17,7 +17,7 @@ function ProductCard({product}) {
         }
         // productId: productId,
        console.log(product._id);
-        axios.post('https://sampleserver-96f7c60072ed.herokuapp.com/cart/add-to-cart', {
+        axios.post('https://urlnamastebackend.onrender.com/cart/add-to-cart', {
             userId: user.userId, 
             productId: product._id,
             quantity: Quantity

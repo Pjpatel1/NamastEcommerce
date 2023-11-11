@@ -16,7 +16,7 @@ function LogIn() {
         e.preventDefault();
         try
         {
-            const response =  await axios.post('http://ecommerceserver-riu7.onrender.com:10000/signin',{
+            const response =  await axios.post('https://urlnamastebackend.onrender.com/signin',{
                 Email,
                 Password
             });

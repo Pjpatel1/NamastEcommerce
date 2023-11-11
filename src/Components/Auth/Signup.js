@@ -50,7 +50,7 @@ function Signup() {
         
          try{
           //Hosted server
-          const response =  await axios.post('https://sampleserver-96f7c60072ed.herokuapp.com/register',{
+          const response =  await axios.post('https://urlnamastebackend.onrender.com/register',{
             FirstName: Fname,
             LastName: Lname,
             Email: Email,

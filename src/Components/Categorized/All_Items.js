@@ -9,7 +9,7 @@ function All_Items() {
 
   useEffect(() => {
     console.log("Fetching products from API...");
-    fetch('http://localhost:3001/getProducts')
+    fetch('https://urlnamastebackend.onrender.com/getProducts')
       .then((response) => response.json())
       .then((data) => {
         console.log('Products fetched:', data);
