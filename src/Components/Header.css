@@ -11,7 +11,7 @@ nav a{
 }
 :root {
 	--mainColor: #2196F3;
-	--mainColorLight: #4CAF50;
+	--mainColorLight: #2196F3;
 	--secondaryColor: #db2b39;
 	--textColor: #000000;
     --bs-btn-bg: #29335c !important;
@@ -33,7 +33,7 @@ header {
     margin: 0 auto;
 	height: 80px;
 	padding: 0 2rem;
-	background-color: #4CAF50;
+	background-color: #2196F3;
 	color: #FFFFFF;
 }
 .Logo_parent
@@ -46,7 +46,7 @@ header {
 {
     background-size: cover;
     padding: 5px;
-    height: 100px;
+    height: 120px;
 }
 .FreeSpace
 {
