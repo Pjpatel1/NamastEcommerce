@@ -1,0 +1,47 @@
+<div>
+        <div className='CartPage'>
+            Cart
+            {cartItems.map((cartItem)=>(
+              <div key = {cartItem.Id} className='CartProduct'>
+                  <div className='ProductImageCover'>
+                    <img className="ProductImage"src={cartItem.productId.ProductImage1}/>
+                  </div>
+                  <div className='CartProductDetails'>
+                      <div className='CartProductName'>
+                        <span className="cartMainText">{cartItem.productId.Name}</span>
+                      </div>
+                      <div className='CartProductName'>
+                      <span className="cartMainText"> Price:</span> <span className="CartValues">{cartItem.productId.Price}</span>
+                      </div>
+                      <div className="CartProductName">
+                      <span className="cartMainText"> Quantity:</span> <span className="CartValues">{cartItem.quantity}</span>
+                      </div>
+                    <div>
+
+                    </div>
+                  </div>
+                  <div className='FreeSpace'>
+                  </div>
+                  <div className='PayableAmount'>
+                      {cartItem.totalAmount}
+                  </div>
+                  <div>
+                    <button onClick={() => removeProduct(cartItem._id)}>Remove</button>
+                  </div>
+                  
+              </div>
+            ))}
+            <div className="billing">
+              <div className="cartMainText">
+              Total:
+              </div>
+              <div className="FreeSpace"></div>
+              <div className="billAmount">
+                {calculateTotalAmount()}
+              </div>
+            </div>
+            </div>
+            <div className="cartValues Greeting">
+                Approved Thank You
+            </div>      
+    </div>

@@ -81,3 +81,17 @@
     align-items: center;
     text-align: center;
 }
+.removeBtn
+{
+    background-color: #4CAF50;
+    border-radius: 2px;
+    padding:10px;
+}
+.deleteImageCover
+{
+    text-align: center;
+}
+.deleteImg
+{
+    width: 20px;
+}

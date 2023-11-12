@@ -4,7 +4,7 @@ import {useUser} from '../Auth/UserContext';
 import "../Cart/Cart.css"
 import Deep from '../../Images/Drinks.jpeg'
 import QuantityInput from '../mui/mui';
-
+import Bin from "../../Images/bin.png"
 function UserCart() {
     const [cartItems, setCartItems] = useState([]);
     const {user} = useUser();
@@ -25,7 +25,7 @@ function UserCart() {
           .catch((error) => {
             console.error('Error fetching cart:', error);
           });
-      }, [user.userId]);
+      }, [user.userId,setCartItems]);
       const calculateTotalAmount = () => {
         let total = 0;
         cartItems.forEach((cartItem) => {
@@ -33,7 +33,18 @@ function UserCart() {
         });
         return total;
       };
-     
+      const removeProduct = async (cartItemId) => {
+        console.log("funtion called")
+        try {
+          // Send a DELETE request to remove the product from the cart
+          await axios.delete(`https://urlnamastebackend.onrender.com/cart/remove-from-cart/${user.userId}/${cartItemId}`);
+          // Fetch the updated cart items after removal
+          const updatedCart = await axios.get(`https://urlnamastebackend.onrender.com/cart/get-cart/${user.userId}`);
+          setCartItems(updatedCart.data);
+        } catch (error) {
+          console.error('Error removing product from cart:', error);
+        }
+      };
   return (
     <div>
         <div className='CartPage'>
@@ -59,10 +70,15 @@ function UserCart() {
                   </div>
                   <div className='FreeSpace'>
                   </div>
-                  <div className='PayableAmount'>
-                      {cartItem.totalAmount}
+                  <div>
+                    <div className='PayableAmount'>
+                      Total of Item: {cartItem.totalAmount}
+                    </div>
+                    <div className='deleteImageCover'>
+                      <img className='deleteImg' src={Bin} onClick={() => removeProduct(cartItem._id)}></img>
+                      {/* onClick={() => removeProduct(cartItem._id)} */}
+                    </div>
                   </div>
-                  
               </div>
             ))}
             <div className="billing">

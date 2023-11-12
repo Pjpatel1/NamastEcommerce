@@ -49,19 +49,12 @@ function Signup() {
       {
         
          try{
-          //Hosted server
-          const response =  await axios.post('https://urlnamastebackend.onrender.com/register',{
+          const localresponse = await axios.post('https://urlnamastebackend.onrender.com/register', {
             FirstName: Fname,
             LastName: Lname,
             Email: Email,
             Password: Password,
           });
-          const localresponse =  await axios.post('https://localhost3001:/register',{
-            FirstName: Fname,
-            LastName: Lname,
-            Email: Email,
-            Password: Password,
-        });
 
         // This is for local server
         if(localresponse.status === 200)
@@ -75,16 +68,16 @@ function Signup() {
             alert('Signup failed. Please try again.');
           }
           //THis is for hosted  server
-          if(response.status === 200)
-          {
-            alert('User created Successfully go ahead and sign in');
-            navigate('/login');
-          }
+          // if(response.status === 200)
+          // {
+          //   alert('User created Successfully go ahead and sign in');
+          //   navigate('/login');
+          // }
          
-          else
-          {
-            alert('Signup failed. Please try again.');
-          }
+          // else
+          // {
+          //   alert('Signup failed. Please try again.');
+          // }
           
          } 
          catch(error)
