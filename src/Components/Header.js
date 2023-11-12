@@ -4,7 +4,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import {FaBars,FaTimes} from "react-icons/fa";
 import { useRef } from "react";
-import Logo from "../Images/Namaste-Logo_Ver-12.png";
+import Logo from "../Images/Logo.png";
 import CartLogo from "../Images/shoppingCart.png"
 import { Link,useNavigate } from "react-router-dom";
 import axios from "axios";
