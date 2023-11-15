@@ -35,7 +35,18 @@ function ProductCard({product}) {
     <div className='ProductCards'>
         <div className='ProductCard'>
             <div className='ProductImage'>
-                <img className="ProImage"src={product.ProductImage1}/>
+            {
+              product.ProductImage1.includes('http') ? 
+              (
+            // If ProductImage1 is a URL
+                <img className='ProImage' src={product.ProductImage1} alt={product.Name} />
+              ) 
+              : 
+              (
+            // If ProductImage1 is a base64 string
+                <img className='ProImage' src={`data:image/png;base64,${product.ProductImage1}`} alt={product.Name} />
+              )}
+
             </div>
             <div  className="ProductPrice">
                 Price: {product.Price}

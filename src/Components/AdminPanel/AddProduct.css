@@ -1,0 +1,16 @@
+.ProductForm
+{
+   text-align: center;
+}
+.ProductInputs
+{
+    margin: 10px;
+}
+.ProductInputs input 
+{
+    margin: 10px !important;
+}
+.ProductInputs textarea
+{
+    margin-left: 10px;
+}

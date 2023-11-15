@@ -19,7 +19,8 @@ import Signup from './Components/Auth/Signup';
 import Forgotpassword from './Components/Auth/Forgotpassword';
 import UserCart from './Components/Cart/UserCart';
 import { UserProvider } from '../src/Components/Auth/UserContext'; // Import the UserProvider
-import Addproduct from '../src/Components/AddProduct';
+import Addproduct from '../src/Components/AdminPanel/AddProduct';
+
 function App() {
   const basename = process.env.NODE_ENV === 'production' ? '/my-repo' : '/';
   return (
@@ -42,8 +43,9 @@ function App() {
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/ForgotPassword" element={<Forgotpassword/>}/>
         <Route path="/userCart" element={<UserCart/>}/>
-        <Route path="/*" element={<NotFoundPage />} />
         <Route path="/Addproduct" element={<Addproduct/>}/>
+        <Route path="/*" element={<NotFoundPage />} />
+        
       </Routes>
     </BrowserRouter>
     </UserProvider>
