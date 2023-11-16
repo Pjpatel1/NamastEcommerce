@@ -72,7 +72,7 @@ function UserCart() {
                   </div>
                   <div>
                     <div className='PayableAmount'>
-                      Total of Item: {cartItem.totalAmount}
+                      Total of Item: ${cartItem.totalAmount}
                     </div>
                     <div className='deleteImageCover'>
                       <img className='deleteImg' src={Bin} onClick={() => removeProduct(cartItem._id)}></img>
@@ -97,7 +97,6 @@ function UserCart() {
     </div>
   )
 }
-
 export default UserCart;
 // {cartItems.map((cartItem)=>(
 //   <div key = {cartItem.Id} className='CartProduct'>

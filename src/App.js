@@ -12,7 +12,7 @@ import Flyers from "./Components/Categorized/Flyer";
 import Frozen from "./Components/Categorized/Frozen";
 import IndianSnacks from "./Components/Categorized/IndianSnacks";
 import Lentils from "./Components/Categorized/lentils";
-import Vegetables from "./Components/Categorized/Vegitables";
+import Vegetables from "./Components/Categorized/Vegetables";
 import ProductDetails from './Components/ProductDetails';
 import LogIn from './Components/Auth/LogIn';
 import Signup from './Components/Auth/Signup';

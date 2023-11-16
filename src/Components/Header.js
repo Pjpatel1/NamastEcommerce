@@ -74,11 +74,7 @@ function Header ()
                     Indian Snacks
                 </div>
             </Link>
-            <Link to = "/Lentils">
-                <div className="Nav-Elements" onClick={(e)=>{showNavbar(e)}}>
-                    Lentils
-                </div>
-            </Link>
+            
            
             <Link to = "/Drinks">
                 <div className="Nav-Elements" onClick={(e)=>{showNavbar(e)}}>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductTable from './ProductTable';
+import Dropdown from 'react-bootstrap/Dropdown';
 const AddProductForm = () => {
   const [productList, setProductList] = useState([]);
   const [productData, setProductData] = useState({
@@ -31,7 +32,9 @@ const AddProductForm = () => {
   const handleImageUrlChange = (e, index) => {
     setProductData({ ...productData, [`ProductImage${index}Url`]: e.target.value });
   };
-
+  const handleCategoryChange = (e) => {
+    setProductData({ ...productData, Category: e.target.value });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -43,8 +46,9 @@ const AddProductForm = () => {
           formData.append(key, productData[key]);
         }
       }
-
+      console.log(formData);
       await axios.post('https://urlnamastebackend.onrender.com/add/product', formData);
+      
       fetchProducts();
       // Handle success or redirect as needed
     } catch (error) {
@@ -118,8 +122,14 @@ const handleRemove = async (product) => {
       </div>
       <div>
       <label>
-        Category:
-        <input type="text" name="Category" value={productData.Category} onChange={handleInputChange} />
+          <select id = "categoryDropdown" onChange={handleCategoryChange}>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Indian_Snacks">Indian Snack</option>
+            <option value="Lentils">Lentils</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Flowers">Flowers</option>
+            <option value="Frozen_Food">Frozen Food</option>
+          </select>
       </label>
       </div>
       <div>
