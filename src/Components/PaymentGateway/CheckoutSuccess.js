@@ -27,7 +27,6 @@ function CheckoutSuccess() {
         const formattedProducts = cartItems.map((cartItem) => (
           `- ${cartItem.productId.Name} x${cartItem.quantity}: $${cartItem.totalAmount}`
         )).join('\n');
-
         // Calculate total
         const calculateTotalAmount = () => {
           let total = 0;
@@ -36,10 +35,8 @@ function CheckoutSuccess() {
           });
           return total.toFixed(2);
         };
-
         const total = calculateTotalAmount();
         const recipientEmail = userEmail;
-
         // Template to send email
         const templateParams = {
           user_name: userName,
@@ -57,6 +54,10 @@ function CheckoutSuccess() {
         const emailResponse = await emailjs.send(serviceId, templateId, templateParams, YOUR_PUBLIC_KEY, recipientEmail);
         console.log('Email sent successfully:', emailResponse);
         // Additional actions after successful checkout...
+        //Removeing cart Items from the database after completion of checkout.
+        // await.axios.delete(``);
+        await axios.delete(`/cart/remove-cart/${userId}`);
+
         //I want to remove the session.
         sessionStorage.clear();
 
@@ -78,7 +79,11 @@ function CheckoutSuccess() {
   }, [userId, cartItems]);
 
   return (
-    <h2>CheckoutSuccess I you have logged in with gmail REgistered email you recive Mail</h2>
+
+    <>
+    <h2>Checkout Success</h2>
+    <h5> If you have logged in with gmail Registered email you will recive Mail</h5>
+    </>
   );
 }
 

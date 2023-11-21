@@ -13,7 +13,7 @@ export const UserProvider = ({ children }) => {
     const logout = () => {
         setUser({
             loggedIn: false,
-            firstName:'',
+            firstName:"",
             userId:null,
             email:null
         });
