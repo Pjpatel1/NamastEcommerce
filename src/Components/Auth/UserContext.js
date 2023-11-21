@@ -7,13 +7,15 @@ export const UserProvider = ({ children }) => {
     const [user, setUser] = useState({
         loggedIn: false,
         firstName: "",
-        userId:null
+        userId:null,
+        email:null,
     });
     const logout = () => {
         setUser({
             loggedIn: false,
             firstName:'',
-            userId:null
+            userId:null,
+            email:null
         });
     };
 

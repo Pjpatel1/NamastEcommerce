@@ -31,6 +31,7 @@ function LogIn() {
                         loggedIn:true,
                         firstName: response.data.FirstName,
                         userId: response.data.userId,
+                        email: response.data.Email
                     });
                 }
                 else{

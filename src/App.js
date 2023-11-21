@@ -20,6 +20,7 @@ import Forgotpassword from './Components/Auth/Forgotpassword';
 import UserCart from './Components/Cart/UserCart';
 import { UserProvider } from '../src/Components/Auth/UserContext'; // Import the UserProvider
 import Addproduct from '../src/Components/AdminPanel/AddProduct';
+import CheckoutSuccess from './Components/PaymentGateway/CheckoutSuccess';
 
 function App() {
   const basename = process.env.NODE_ENV === 'production' ? '/my-repo' : '/';
@@ -35,7 +36,7 @@ function App() {
         <Route path = '/Flowers' element = {<Flowers/>}/>
         <Route path='/Flyers' element = {<Flyers/>} />
         <Route path='/Frozen' element = {<Frozen/>}/>
-        <Route path = '/IndianSnacks' element={<IndianSnacks/>}/>
+        <Route path ='/IndianSnacks' element={<IndianSnacks/>}/>
         <Route path='/Lentils' element={<Lentils/>}/>
         <Route path='/Vegetable' element={<Vegetables/>}/>
         <Route path="/ProductDetail" element={<ProductDetails/>}/>
@@ -44,6 +45,7 @@ function App() {
         <Route path="/ForgotPassword" element={<Forgotpassword/>}/>
         <Route path="/userCart" element={<UserCart/>}/>
         <Route path="/Addproduct" element={<Addproduct/>}/>
+        <Route path="/Checkout-success" element={<CheckoutSuccess/>}/>
         <Route path="/*" element={<NotFoundPage />} />
         
       </Routes>

@@ -116,7 +116,7 @@ function Header ()
                             </svg>}
                 </Dropdown.Toggle>
 
-                <Dropdown.Menu >
+                <Dropdown.Menu>
                     
                 {user.loggedIn ? 
                 (
