@@ -52,7 +52,7 @@ function CheckoutSuccess() {
         console.log('Recipient Email:', recipientEmail);
         console.log("I am looking for deleting the code");
 
-        const deleteResponse = await axios.delete(`/cart/remove-checked-out/${userId}`);
+        const deleteResponse = await axios.delete(`https://urlnamastebackend.onrender.com/cart/remove-checked-out/${userId}`);
         console.log('Delete Cart Response:', deleteResponse.data);
         if (deleteResponse.status === 200) {
           // Additional logic after successful deletion
