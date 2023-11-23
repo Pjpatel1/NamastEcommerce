@@ -51,12 +51,15 @@ function CheckoutSuccess() {
         console.log('Public Key:', YOUR_PUBLIC_KEY);
         console.log('Recipient Email:', recipientEmail);
         console.log("I am looking for deleting the code");
-        await axios.delete(`/cart/remove-cart/${userId}`);
-        console.log('Delete Cart Response:', response);
-        console.log("I am looking for deleting the code");
-        await axios.delete(`/cart/remove-checked-out/${userId}`);
-        console.log('Delete Cart Response:', response);
 
+        const deleteResponse = await axios.delete(`/cart/remove-checked-out/${userId}`);
+        console.log('Delete Cart Response:', deleteResponse.data);
+        if (deleteResponse.status === 200) {
+          // Additional logic after successful deletion
+          // ...
+        } else {
+          console.error('Failed to delete cart items. Status Code:', deleteResponse.status);
+        }
         const emailResponse = await emailjs.send(serviceId, templateId, templateParams, YOUR_PUBLIC_KEY, recipientEmail);
         console.log('Email sent successfully:', emailResponse);
         // Additional actions after successful checkout...
