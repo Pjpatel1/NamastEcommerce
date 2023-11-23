@@ -54,7 +54,7 @@ function CheckoutSuccess() {
         await axios.delete(`/cart/remove-cart/${userId}`);
         console.log('Delete Cart Response:', response);
         console.log("I am looking for deleting the code");
-        await axios.delete(`/cart/remove-cart/${userId}`);
+        await axios.delete(`/cart/remove-checked-out/${userId}`);
         console.log('Delete Cart Response:', response);
 
         const emailResponse = await emailjs.send(serviceId, templateId, templateParams, YOUR_PUBLIC_KEY, recipientEmail);
