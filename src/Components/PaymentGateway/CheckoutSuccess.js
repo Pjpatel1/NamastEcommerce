@@ -76,7 +76,7 @@ function CheckoutSuccess() {
     };
 
     fetchDataAndSendEmail();
-  }, [userId, cartItems]);
+  }, []);
 
   return (
 
