@@ -1,0 +1,130 @@
+.HeroSection {
+    background-color: #cfe7d9;
+    display: grid;
+    width: 100%;
+    border-radius: 10px;
+    height: 538px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* .sub_section1 {
+    height: 100%;
+  } */
+  .sub_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    z-index:1;
+  }
+  .sub_section div {
+    margin-bottom: 10px; /* Adjust spacing between lines if needed */
+  }
+  
+  .sub_section2 {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .sub_section2 img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .ViewProducts
+  {
+    margin-top:30px ;
+  }
+  .sub_section2 .circle {
+    position: absolute;
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    background-color: #01684b; /* Adjust the color as needed */
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+.sub_section2 img,
+.sub_section2 .circle {
+ 
+}
+  
+  
+  .bubble1 {
+    position: absolute;
+    width: 200px; /* Adjust the width as needed */
+    left: 72%;
+    top: 26%;
+    transform: translate(-50%, -50%); /* Center the image based on its own dimensions */
+  }
+  
+  .bubble2 {
+    position: absolute;
+    width: 200px; /* Adjust the width as needed */
+    left: 25%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bubble3 {
+    position: absolute;
+    width: 200px; /* Adjust the width as needed */
+    left: 40%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+  }
+  .bubble4 {
+    position: absolute;
+    width: 200px; /* Adjust the width as needed */
+    left: 77%;
+    top: 74%;
+    transform: translate(-50%, -50%);
+  }
+  .HeroText
+  {
+    font-family: 'open-sans';
+    font-size: 50px;
+    font-weight: 900;
+    color: #001e2b;
+  }
+  .ViewProductsBtn
+  {
+    background-color: #001e2b;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .TypeWriter
+  {
+    height: 50%;
+  }
+.Arrow-Img
+{
+  width: 20px;
+}
+  @media (max-width:768px)
+  {
+
+    .HeroSection {
+      display: block;
+    }
+  .sub_section
+  {
+    z-index: 2;
+    background-color: rgba(128, 128, 128, 0.815);
+  }
+    .sub_section,
+    .sub_section2 {
+      width: 100%;
+      position: relative;
+    }
+  
+    .sub_section2 {
+      margin-top: -538px; /* Adjust the negative margin as needed to overlap */
+    }
+  }

@@ -13,32 +13,51 @@ function UserCart() {
     const {user} = useUser();
     
     if (!user) {
-       <navigate to="/login" />;
+      //  <navigate to="/login" />;
+      navigate("/login");
     }
     useEffect(() => {
-        // Make a GET request to fetch the user's cart items
-        axios.get(`https://urlnamastebackend.onrender.com/cart/get-cart/${user.userId}`)
-          .then((response) => {
-            setCartItems(response.data);
-            cartItems.map((cartItems)=>{
-                console.log(cartItems._id);
-                console.log(cartItems.productId.Brand)
-                console.log(cartItems.productId.Quantity)
-                console.log(cartItems.totalAmount)
-                console.log(cartItems.quantity)
-            })
-          })
-          .catch((error) => {
-            console.error('Error fetching cart:', error);
-          });
-      }, [user.userId,setCartItems]);
+      const fetchData = async () => {
+        try {
+          // Make a GET request to fetch the user's cart items
+          const response = await axios.get(`https://urlnamastebackend.onrender.com/cart/get-cart/${user.userId}`);
+          setCartItems(response.data);
+        } catch (error) {
+          console.error('Error fetching cart:', error);
+        }
+      };
+    
+      fetchData();
+    }, [user.userId, setCartItems]);
       const calculateTotalAmount = () => {
         let total = 0;
+        let totalTax = 0;
+    
         cartItems.forEach((cartItem) => {
-          total += cartItem.totalAmount;
+          // Get the item price and quantity
+          const itemPrice = cartItem.productId.offer.isActive
+            ? parseFloat(cartItem.productId.DiscountedPrice.replace('$', ''))
+            : parseFloat(cartItem.productId.Price.replace('$', ''));
+    
+          const itemQuantity = cartItem.quantity;
+    
+          // Calculate the total amount for the item
+          const itemTotal = cartItem.totalAmount;
+    
+          // Check if the item is taxable
+          if (cartItem.productId.Taxable === true) {
+            // Calculate tax (15% of the item price)
+            const taxAmount = 0.15 * itemPrice * itemQuantity;
+            totalTax += taxAmount;
+          }
+    
+          // Add the total amount for the item to the overall total
+          total += itemTotal;
         });
-        return total.toFixed(2);
+          total = total+totalTax;
+        return { total: total.toFixed(2), totalTax: totalTax.toFixed(2) };
       };
+
       const removeProduct = async (cartItemId) => {
         console.log("funtion called")
         try {
@@ -64,6 +83,7 @@ const handleOpenCheckout = () => {
   sessionStorage.setItem('userId', userID);
   sessionStorage.setItem('UserName', UserName);
 };
+const { total, totalTax } = calculateTotalAmount();
 
   return (
     <div>
@@ -79,7 +99,20 @@ const handleOpenCheckout = () => {
                         <span className="cartMainText">{cartItem.productId.Name}</span>
                       </div>
                       <div className='CartProductName'>
-                      <span className="cartMainText"> Price:</span> <span className="CartValues">{cartItem.productId.Price}</span>
+                      <span className="cartMainText"> Price:</span> 
+                      {
+                        cartItem.productId.offer.isActive ? 
+                        (
+                          <>
+                            <span className="CartValues actual">{cartItem.productId.Price}</span>
+                            <span className="CartValues ">{cartItem.productId.DiscountedPrice}</span>
+                          </>
+                        ) 
+                        :
+                        (
+                          <span className="CartValues">{cartItem.productId.Price}</span>
+                        )
+                      }
                       </div>
                       <div className="CartProductName">
                       <span className="cartMainText"> Quantity:</span> <span className="CartValues">{cartItem.quantity}</span>
@@ -107,8 +140,12 @@ const handleOpenCheckout = () => {
               </div>
               <div className="FreeSpace"></div>
               <div className="billAmount">
-                {calculateTotalAmount()}
+                {total}
               </div>
+              <div className="FreeSpace"></div>
+              <div className="billAmount">
+        {totalTax}
+      </div>
             </div>
             </div>
             <div className="cartValues Greeting">

@@ -18,8 +18,13 @@ nav a{
 }
 .Header_Center
 {
+	margin:0 auto;
+	position: fixed;
     width: 100% ;
+	top: 0;
     margin: 0 auto;
+	z-index: 20;
+	
 }
 .Cart
 {
@@ -29,12 +34,15 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	max-width: 1296px;
     width: 100%;
     margin: 0 auto;
 	height: 80px;
 	padding: 0 2rem;
-	background-color: #2196F3;
-	color: #FFFFFF;
+	background-color: #fff;
+	color: rgb(33, 50, 60);
+	box-shadow: 0 4px 6px #9d9d9b;
+	border-radius: 20px;
 }
 .Logo_parent
 {
@@ -75,15 +83,17 @@ header .nav-btn {
 }
 .Nav-Elements
 {
-	margin: 10px;
+	margin: 27px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 17px;
 	font-weight: 900;
-	Color:#ffffff;
+	color: rgb(33, 50, 60);
+	cursor:pointer;
 }
 .Nav-Elements:hover
 {
-	color:#E0E0E0;
+	color:#535050;
+	cursor:pointer;
 }
 .DrpDwn
 {
@@ -104,7 +114,10 @@ nav {
 		visibility: visible;
 		opacity: 1;
 	}
-
+	.Nav-Elements
+	{
+		margin-top: 50px;
+	}
 	header nav {
 		position: fixed;
 		top: -110vh;
@@ -119,6 +132,7 @@ nav {
 		background-color: #4CAF50;
 		transition: 0.8s;
 		z-index: 10;
+		overflow-y: auto;
 	}
 
 	header .responsive_nav {
@@ -134,4 +148,33 @@ nav {
 	nav a {
 		font-size: 1.5rem;
 	}
-}
+
+	.Nav-Elements {
+	  display: block; /* Show each Nav-Elements as a block in mobile view */
+	  margin-bottom: 10px; /* Add some space between Nav-Elements in mobile view */
+	  cursor: pointer;
+	}
+  
+	.category-dropdown-center {
+	  overflow-y: auto; /* Enable vertical scrolling for the entire navbar */
+	  top:0px;
+	}
+  
+	.FamousCategoryPopup {
+	  position: relative;
+	}
+  
+	.FamousCategoryPopup .category-dropdown-center {
+	  position: absolute;
+	  top: 100%; /* Position the dropdown below the "Products Category" div */
+	  left: 0;
+	  width: 100%;
+	  max-height: 200px; /* Set a maximum height for the dropdown */
+	  overflow-y: auto; /* Enable vertical scrolling for the dropdown */
+	  z-index: 21; /* Ensure the dropdown is above other elements */
+	  background-color: white; /* Set a background color for the dropdown */
+	  border: 1px solid #ddd;
+	  border-radius: 10px;
+	  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+  }

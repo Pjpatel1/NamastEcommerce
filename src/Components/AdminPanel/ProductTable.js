@@ -32,21 +32,20 @@ const ProductTable = ({ data, onEdit, onRemove }) => {
         selector: 'ProductImage1', 
         sortable: true, 
         cell: row => renderImage(row.ProductImage1),
-     },
-    { 
-        name: 'ProductImage2',
-        selector: 'ProductImage2', 
-        sortable: true,
-        cell: row => renderImage(row.ProductImage2), 
     },
-    { 
-        name: 'ProductImage3', 
-        selector: 'ProductImage3', 
-        sortable: true, 
-        cell: row => renderImage(row.ProductImage3), },
+    {
+      Name: 'Start Date', selector:'Start Date', sortable: true
+    },
+    {
+      Name:'End Date',selector:'End Date', sortable:true
+    },
+    {
+      Tag:'Tag',selector:'Tag', sortable:true
+    },
     {name:'Actions',
      cell: row =>(
         <div>
+            <button onClick={() => onEdit(row)}>Edit</button>
             <button onClick={() => onRemove(row)}>Remove</button>
         </div>
      )   

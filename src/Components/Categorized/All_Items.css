@@ -5,3 +5,8 @@
     grid-template-columns: repeat(auto-fit,  22rem);
     justify-content: center;
 }
+.MainContent
+{
+    max-width: 1296px;
+    margin: 150px auto;
+}

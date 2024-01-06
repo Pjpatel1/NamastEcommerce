@@ -11,6 +11,7 @@
     /* background-color: #; */
     border-radius: 20px;
     text-align: center;
+    overflow: hidden;
   }
   .ProductImage {
     text-align: center;
@@ -71,6 +72,39 @@
     font-family: "Raleaway";
     margin-right: 5px;
 }
+
+.Smalltag
+{
+    position: relative;
+    top:0px;
+    background-color: red;
+    width: 35px;
+    margin:-10px;
+
+}
+#triangle-topleft {
+    position: relative;
+    width: 0;
+    height: 0;
+    margin:-15px;
+    border-top: 75px solid red; /* Adjust the size of the triangle */
+    border-right: 150px solid transparent;
+  }
+  
+  #triangle-topleft span {
+    position: absolute;
+   
+    transform: translate(27%, -128%);
+    color: white;
+    font-size: 19px;
+    font-weight: 600;
+  }
+  .OriginalPrice
+  {
+    margin-right: 20px;
+    text-decoration: line-through;
+
+  }
 @media screen and (min-width:600px) {
     
 }

@@ -1,5 +1,8 @@
 import React from 'react'
 import "./ContactUS.css"
+import Instalogo from "../Images/instagramLogo.svg"
+import Whatsapp from "../Images/Whatsapp.svg";
+import FacebookLogo from "../Images/FacebookLogo.svg"
 function ConstactUS() {
   return (
     <div className='section3'>
@@ -36,6 +39,17 @@ function ConstactUS() {
             </div>
             <div className='LabelInfo'>
                 4450 Walker Rd Unit 400, Windsor, ON N8W 3T5
+            </div>
+            <div className='SocialNetwork'>
+              <div className='InstaLogo'>
+                <img src={Instalogo} alt='Instagram' className='InstaLogoSvg'/>
+              </div>
+              <div className='WhatsappLogo'>
+                <img src={Whatsapp}alt='Whatsapp' className='whatsappLogoSvg'/>
+              </div>
+              <div className='FacebookLogo'>
+                <img src={FacebookLogo} alt='Facebook' className='FacebookLogoSvg'/>
+              </div>
             </div>
         </div>
     </div>

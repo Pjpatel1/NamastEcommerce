@@ -3,13 +3,16 @@ import "../Components/Landing.css"
 import CardSlider from "./CardSlider"
 import Producttypes from "./Producttypes"
 import ContactUS from "./ContactUS"
+import HeroSection from "./HeroSection"
+
 function Landing ()
 {
     return(
         <div className="Cover-sizing">
-            <SimpleSlider></SimpleSlider>
+            <HeroSection/>
+            {/* <h2>Featured Products</h2> */}
+            {/* <CardSlider/> */}
             <Producttypes/>
-            <CardSlider/>
             <ContactUS/>
         </div>
     )

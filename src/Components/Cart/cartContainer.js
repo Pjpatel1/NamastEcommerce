@@ -14,7 +14,6 @@ const CartContainer = () => {
         console.error('Error fetching cart data:', error);
       }
     };
-
     fetchCartData();
   }, []);
 

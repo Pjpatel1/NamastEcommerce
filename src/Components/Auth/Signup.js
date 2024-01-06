@@ -150,17 +150,7 @@ function Signup() {
                         Sign Up
               </button>
                   
-              <p className='text'>
-                  Or Signup Using
-              </p>
-              <div className='alt-login'>
-                  <div className='facebook'>
-                    Facebook
-                  </div>
-                  <div className='Google'>
-                    Google 
-                  </div>
-              </div>
+              
             </div>
             <div className='Alerts'>
             <Stack sx={{ width: '100%' }} spacing={3}>
