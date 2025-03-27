@@ -17,7 +17,7 @@ function LogIn() {
         try{
             console.log(authResult)
         }
-        catch{
+        catch(err){
             console.log("Error while requesting google code", err);
         }
     }
