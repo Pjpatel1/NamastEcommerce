@@ -4,6 +4,7 @@ import {Link, useNavigate } from 'react-router-dom';
 import "./Auth.css"
 import axios from "axios";
 import {useUser} from "./UserContext";
+import {useGoogleLogin} from '@react-oauth/google'
 function LogIn() {
     const {user, setUser } = useUser(); 
     const [Email, setEmail] = useState('');
@@ -12,6 +13,11 @@ function LogIn() {
     const [loggedIn, setLoggedIn] = useState(false);
     const [FirstName, setFirstName] = useState('');
     const navigate = useNavigate();
+    const googlelogin = useGoogleLogin({
+        onSuccess: ()=>{},
+        onError: ()=>{},
+        flow:'auth-code'
+    })
     const handleSignIn = async (e) =>{
         e.preventDefault();
         try
@@ -105,7 +111,7 @@ function LogIn() {
                 </div>
                 
                 <div className='Google'>
-                    <button onClick={Googlelogin}>Login With Google</button>
+                    <button onClick={googlelogin}>Login With Google</button>
                 </div>
             </div>
             
