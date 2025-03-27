@@ -24,8 +24,16 @@ import Addproduct from '../src/Components/AdminPanel/AddProduct';
 import CheckoutSuccess from './Components/PaymentGateway/CheckoutSuccess';
 import SpecialDeals from './Components/SpecialDeals';
 import ProductDetailsPage from './Components/ProductDetails'
+import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 function App() {
   const basename = process.env.NODE_ENV === 'production' ? '/my-repo' : '/';
+  const GoogleOAuthWrapper = ()=>{
+    return(
+      <GoogleOAuthProvider clientId='977364573002-hg057dbdvp90ckaitk1piqrv8ub21sh1.apps.googleusercontent.com'>
+          <GoogleLogin></GoogleLogin>
+      </GoogleOAuthProvider>
+    )
+  }
   return (
     <UserProvider>
     <BrowserRouter basename='/Namaste'>
