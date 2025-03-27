@@ -104,7 +104,6 @@ function LogIn() {
                 <div className='facebook'>
                 </div>
                 <div>Hello Git watcher check is it working good?
-                    
                 </div>
                 <div className='Google'>
                     <h1>
