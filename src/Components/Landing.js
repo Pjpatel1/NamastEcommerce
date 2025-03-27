@@ -11,7 +11,16 @@ function Landing ()
     useEffect(() => {
         alert('Welcome! This project may run slow as it is hosted on free server. It is regorusly tested on local environment. It runs perfect!');
       }, []);
-    
+      useEffect(() => {
+        const deviceData = {
+          userAgent: navigator.userAgent,
+          platform: navigator.platform,
+          os: navigator.appVersion,
+          language: navigator.language,
+          screenWidth: window.innerWidth,
+          screenHeight: window.innerHeight,
+        };
+      },[]);
     return(
         <div className="Cover-sizing">
             <showAlert/>
@@ -23,4 +32,4 @@ function Landing ()
         </div>
     )
 }
-export default Landing
+export default Landing;

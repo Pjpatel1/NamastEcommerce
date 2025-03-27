@@ -8,7 +8,7 @@ import arrow from "../Images/Arrow.svg"
 import { Link } from 'react-router-dom';
 function HeroSection() {
     const [lines, setLines] = useState([]);
-    const typedText = ["This Project is solely build", " to show my", " Development and Cybersecurity skills"];
+    const typedText = ["This Project is solely build", " to show", " Development and Cybersecurity skills"];
   
     useEffect(() => {
         const animateText = (index, lineIndex, currentText) => {

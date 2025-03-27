@@ -103,17 +103,11 @@ function LogIn() {
             <div className='alt-login'>
                 <div className='facebook'>
                 </div>
+                <div>Hello Git watcher check</div>
                 <div className='Google'>
-                {/* <GoogleLogin className="blue"
-                            clientId="79474543031-tmjo35916ufn421ej3u1i2ljao2apr4s.apps.googleusercontent.com"
-                            buttonText=""
-                            onSuccess={onSuccess}
-                            // onFailure={onFailure}
-                            cookiePolicy={'single_host_origin'}
-                            isSignedIn={false} // alternative is true, which keeps the user signed in
-                            icon={false}    // alt is true, and this puts the google logo on your button, but I don't like it
-                            theme="dark"  // alternative is light, which is white
-                        /> */}
+                    <h1>
+                        Google Login button
+                    </h1>
                 </div>
             </div>
             
