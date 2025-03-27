@@ -13,9 +13,17 @@ function LogIn() {
     const [loggedIn, setLoggedIn] = useState(false);
     const [FirstName, setFirstName] = useState('');
     const navigate = useNavigate();
+    const responseGoogle = async (authResult)=>{
+        try{
+            console.log(authResult)
+        }
+        catch{
+            console.log("Error while requesting google code", err);
+        }
+    }
     const googlelogin = useGoogleLogin({
-        onSuccess: ()=>{},
-        onError: ()=>{},
+        onSuccess: responseGoogle,
+        onError: responseGoogle,
         flow:'auth-code'
     })
     const handleSignIn = async (e) =>{
