@@ -24,13 +24,13 @@ import Addproduct from '../src/Components/AdminPanel/AddProduct';
 import CheckoutSuccess from './Components/PaymentGateway/CheckoutSuccess';
 import SpecialDeals from './Components/SpecialDeals';
 import ProductDetailsPage from './Components/ProductDetails'
-import { GoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 function App() {
   const basename = process.env.NODE_ENV === 'production' ? '/my-repo' : '/';
   const GoogleOAuthWrapper = ()=>{
     return(
       <GoogleOAuthProvider clientId='977364573002-hg057dbdvp90ckaitk1piqrv8ub21sh1.apps.googleusercontent.com'>
-          <GoogleLogin></GoogleLogin>
+          <LogIn></LogIn>
       </GoogleOAuthProvider>
     )
   }
@@ -54,7 +54,7 @@ function App() {
         {/* <Route path="//category:categoryName" render={(props) => <Vegetables category={props.match.params.categoryName} />} /> */}
         <Route path="/Vegetables" element={<Vegetables />} />
         <Route path="/ProductDetail" element={<ProductDetails/>}/>
-        <Route path="/login" element={<LogIn/>}/>
+        <Route path="/login" element={< />}/>
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/ForgotPassword" element={<Forgotpassword/>}/>
         <Route path="/userCart" element={<UserCart/>}/>
