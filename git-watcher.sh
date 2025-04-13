@@ -1,5 +1,4 @@
 
-Copy
 #!/bin/bash
 # Watch for changes and auto-push to GitHub
 echo "Starting Git watcher. Press Ctrl+C to stop."

@@ -54,7 +54,14 @@ function App() {
         {/* <Route path="//category:categoryName" render={(props) => <Vegetables category={props.match.params.categoryName} />} /> */}
         <Route path="/Vegetables" element={<Vegetables />} />
         <Route path="/ProductDetail" element={<ProductDetails/>}/>
+
+
+
         <Route path="/login" element={<GoogleOAuthWrapper/>}/>
+
+
+
+        
         <Route path="/Signup" element={<Signup/>}/>
         <Route path="/ForgotPassword" element={<Forgotpassword/>}/>
         <Route path="/userCart" element={<UserCart/>}/>
