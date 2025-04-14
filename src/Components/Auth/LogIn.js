@@ -15,7 +15,9 @@ function LogIn() {
     const navigate = useNavigate();
     const responseGoogle = async (authResult)=>{
         try{
-            console.log(authResult)
+
+            
+            console.log('Result.data.user', authResult.data.user)
         }
         catch(err){
             console.log("Error while requesting google code", err);
